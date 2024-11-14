@@ -7,28 +7,19 @@ const app = express(); // サーバーのインスタンス生成
 // 静的ファイルの提供: 'public' ディレクトリ内のファイルを提供
 app.use(express.static(path.join(__dirname, "public")));
 
-// JSONファイルからパスを読み込む関数
-function loadPaths() {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path.join(__dirname, 'path-list.json'), 'utf8', (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        try {
-          const jsonData = JSON.parse(data);
-          resolve(jsonData);
-        } catch (parseErr) {
-          reject(parseErr);
-        }
-      }
-    });
-  });
-}
+// 変数リスト（辞書形式）で URL とファイルパスを設定
+const config = {
+  HtmlFileAria: "public",  // 基本のディレクトリ
+  urls: [
+    { url: "/about", path: "about.html" },
+    { url: "/contact", path: "contact.html" },
+    // 必要なURLとファイルパスを追加
+  ]
+};
 
 // 動的に URL をマッピングしてリクエストに対応
 async function setupRoutes() {
   try {
-    const config = await loadPaths();
     const { HtmlFileAria, urls } = config;
 
     // urls 配列の各要素に対してルートを作成
