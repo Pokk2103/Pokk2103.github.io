@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: ディレクトリ移動
+      run: cd /
+
     - name: チェックアウトリポジトリ
       uses: actions/checkout@v2
 
