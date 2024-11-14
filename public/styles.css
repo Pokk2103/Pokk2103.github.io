@@ -1,0 +1,155 @@
+/* リセットCSS - 基本的なスタイルを初期化 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  /* メインコンテンツ */
+  main {
+    padding: 20px;
+  }
+  
+  .profile, .recent-posts, .post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+  }
+  
+  .recent-posts {
+    margin-top: 30px;
+  }
+  
+  .recent-posts .post {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+  }
+  
+  .recent-posts .post:first-child {
+    border-top: none;
+  }
+  
+  .recent-posts .post h3 a {
+    font-size: 1.25rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .recent-posts .post h3 a:hover {
+    color: #ffcc00;
+  }
+  
+  .recent-posts .post p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* フッター */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  /* 404ページ専用のスタイル */
+.error-page {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .error-page h1 {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+  
+  .error-page p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn-return {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-return:hover {
+    background-color: #ffcc00;
+  }
+  
