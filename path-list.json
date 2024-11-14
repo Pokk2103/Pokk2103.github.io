@@ -1,0 +1,14 @@
+{
+    "HtmlFileAria": "public/",
+    "urls": [
+      {
+        "url": "/",
+        "path": "index.html"
+      },
+      {
+        "url": "/about",
+        "path": "about.html"
+      }
+    ]
+  }
+  

@@ -1,0 +1,15 @@
+{
+  "name": "pokk2103.github.io",
+  "version": "1.0.0",
+  "description": "ぽっくーのページ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "none",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
