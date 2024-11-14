@@ -1,18 +1,26 @@
-name: Pokku-Page.AutoStart
+name: Node.js CI
 
 on:
-  schedule: # 03:00 JST == 18:00 UTC
-    - cron: "0 18 * * *"
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Page-Auto-Start
+
     steps:
-      - name: Commit & Push
-        run: |
-          npm start
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
+    - name: チェックアウトリポジトリ
+      uses: actions/checkout@v2
+
+    - name: 正しいディレクトリに移動
+      run: cd /workspaces/Pokk2103.github.io
+
+    - name: 依存関係のインストール
+      run: npm install
+
+    - name: アプリケーションを開始
+      run: npm start
