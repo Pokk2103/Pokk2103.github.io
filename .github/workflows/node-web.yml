@@ -13,14 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ディレクトリ移動
-      run: cd /
-
     - name: チェックアウトリポジトリ
       uses: actions/checkout@v2
-
-    - name: 正しいディレクトリに移動
-      run: cd /workspaces/Pokk2103.github.io
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # GitHubトークンを使う
 
     - name: 依存関係のインストール
       run: npm install
